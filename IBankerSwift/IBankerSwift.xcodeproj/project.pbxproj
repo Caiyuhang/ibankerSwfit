@@ -27,6 +27,8 @@
 		0F518B7C214261C300F54B6D /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B7B214261C300F54B6D /* BaseModel.swift */; };
 		0F518B7F214261FB00F54B6D /* ProductLibraryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B7E214261FB00F54B6D /* ProductLibraryModel.swift */; };
 		0F518B822142637900F54B6D /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B812142637900F54B6D /* ProductTableViewCell.swift */; };
+		0F518B882145FCEA00F54B6D /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B872145FCEA00F54B6D /* RequestManager.swift */; };
+		0F518B8C2146451300F54B6D /* JsonHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B8B2146451300F54B6D /* JsonHandle.swift */; };
 		3BBF03785AAE62568DBC6FA5 /* Pods_IBankerSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727930A92C85419F5885DE08 /* Pods_IBankerSwiftUITests.framework */; };
 		87363D3A6D653D650B633411 /* Pods_IBankerSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E0F58337C05BF784C43427 /* Pods_IBankerSwiftTests.framework */; };
 		F974FE760CB9FAFB14E3522D /* Pods_IBankerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01204F615D6D1EC52B1D1517 /* Pods_IBankerSwift.framework */; };
@@ -78,6 +80,8 @@
 		0F518B7B214261C300F54B6D /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		0F518B7E214261FB00F54B6D /* ProductLibraryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLibraryModel.swift; sourceTree = "<group>"; };
 		0F518B812142637900F54B6D /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		0F518B872145FCEA00F54B6D /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		0F518B8B2146451300F54B6D /* JsonHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHandle.swift; sourceTree = "<group>"; };
 		15E0F58337C05BF784C43427 /* Pods_IBankerSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBankerSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		399221F87CE24E5B31F06826 /* Pods-IBankerSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBankerSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBankerSwiftTests/Pods-IBankerSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E5C305FD75FF775EE633F3E /* Pods-IBankerSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBankerSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBankerSwiftTests/Pods-IBankerSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -234,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				0F518B7621412B8B00F54B6D /* Common.swift */,
+				0F518B8B2146451300F54B6D /* JsonHandle.swift */,
 				0F518B78214249FA00F54B6D /* Prefix.swift */,
 			);
 			path = Common;
@@ -273,6 +278,7 @@
 		0F518B842142749400F54B6D /* RequestManager */ = {
 			isa = PBXGroup;
 			children = (
+				0F518B872145FCEA00F54B6D /* RequestManager.swift */,
 			);
 			path = RequestManager;
 			sourceTree = "<group>";
@@ -584,6 +590,7 @@
 				0F518B0B21411AEB00F54B6D /* ViewController.swift in Sources */,
 				0F518B79214249FA00F54B6D /* Prefix.swift in Sources */,
 				0F518B822142637900F54B6D /* ProductTableViewCell.swift in Sources */,
+				0F518B882145FCEA00F54B6D /* RequestManager.swift in Sources */,
 				0F518B4521411FB000F54B6D /* IbankerViewController.swift in Sources */,
 				0F518B7C214261C300F54B6D /* BaseModel.swift in Sources */,
 				0F518B4B2141201D00F54B6D /* IMViewController.swift in Sources */,
@@ -596,6 +603,7 @@
 				0F518B0921411AEB00F54B6D /* AppDelegate.swift in Sources */,
 				0F518B3921411C8200F54B6D /* BaseViewController.swift in Sources */,
 				0F518B3B21411C9500F54B6D /* HomeViewController.swift in Sources */,
+				0F518B8C2146451300F54B6D /* JsonHandle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -777,6 +785,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
@@ -794,6 +803,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;
 		};

@@ -8,6 +8,14 @@
 
 import UIKit
 
+// MARK: 引入头文件
 import SnapKit
+import SwiftyJSON
 
+// MARK: 宏定义
 let SCALE = UIScreen.main.bounds.size.width/375.0
+
+// MARK: 接口
+let InternetHttpBaseUrl = "http://www.ourlinked.com:8030/JavaTeam"
+
+

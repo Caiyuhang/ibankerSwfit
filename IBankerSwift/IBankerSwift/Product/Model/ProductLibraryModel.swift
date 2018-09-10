@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HandyJSON
 
 class ProductLibraryModel: BaseModel {
     
@@ -21,4 +22,10 @@ class ProductLibraryModel: BaseModel {
     var userLogo: String?
     var productPassageTitle: String?
     
+}
+
+class TestModel: HandyJSON {
+    var Msg: String?
+    var code: Int?
+    required init() {}
 }

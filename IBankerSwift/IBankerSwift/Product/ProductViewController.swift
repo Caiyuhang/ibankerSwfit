@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SwiftyJSON
+import HandyJSON
 
 private let CellIdent = "productCell"
 
@@ -43,6 +45,7 @@ class ProductViewController: BaseViewController {
 
         setUpUI()
         
+        getProductsData()
     }
     
     @objc fileprivate func searchBtnClicked(btn: UIButton) {
@@ -102,7 +105,12 @@ extension ProductViewController {
         self.view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.top.equalTo(titleLab.snp.bottom)
-            make.bottom.equalTo(view.snp.bottom)
+//            make.bottom.equalTo(view.snp.bottom)
+            if #available(iOS 11.0, *) {
+                 make.bottom.equalTo(view.safeAreaInsets.bottom)
+            } else {
+                 make.bottom.equalTo(view.snp.bottom)
+            }
             make.left.equalTo(view.snp.left)
             make.right.equalTo(view.snp.right)
         }
@@ -113,6 +121,10 @@ extension ProductViewController {
 //控制器遵循tableView的代理和数据源
 extension ProductViewController: UITableViewDelegate, UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 294*SCALE
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -122,17 +134,65 @@ extension ProductViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: CellIdent, for: indexPath) as? ProductTableViewCell
+        var cell = tableView.dequeueReusableCell(withIdentifier: CellIdent) as? ProductTableViewCell
         if cell == nil {
             cell = ProductTableViewCell(style: .default, reuseIdentifier: CellIdent)
         }
         let cellModel = dataArray[indexPath.row]
         cell?.reloadCell(model: cellModel)
+        cell?.selectionStyle = .none
         return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("点击了第\(indexPath.row)行")
+    }
+}
+
+extension ProductViewController {
+    fileprivate func getProductsData() {
+        RequestManager.selectProduct(pageNum: 1, search: nil, success: { (result, error) in
+            
+            if error != nil {
+                print("请求失败")
+                return
+            }
+            let json = JSON(result)
+            //print("JSON:\(json)")
+            if json["code"] == 1
+            {
+                let jsonString = json.rawString(.utf8, options: .prettyPrinted)
+                
+//                let products = [ProductLibraryModel].deserialize(from: jsonString, designatedPath: "data.ProductList")
+//                if let array = products?.first as? ProductLibraryModel {
+//                    self.dataArray.append(array)
+//                    self.tableView.reloadData()
+//                }
+                
+                
+                if let products = [ProductLibraryModel].deserialize(from: jsonString, designatedPath: "data.ProductList") {
+                    //print("ARRAY:\(array)")
+                    
+                    for item in products
+                    {
+                        if let product = item as? ProductLibraryModel
+                        {
+                            self.dataArray.append(item!)
+                        }
+                    }
+                    self.tableView.reloadData()
+//                    dataArray.append(products)
+                }
+            }
+            else
+            {
+                
+            }
+            
+            
+        }) { (error) in
+            
+        }
     }
 }
 

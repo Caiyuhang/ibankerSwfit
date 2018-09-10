@@ -8,6 +8,8 @@ target 'IBankerSwift' do
   # Pods for IBankerSwift
     pod 'SnapKit'
     pod 'Alamofire'
+    pod 'SwiftyJSON'
+    pod 'HandyJSON'
 
 
   target 'IBankerSwiftTests' do
