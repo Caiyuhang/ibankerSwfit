@@ -13,6 +13,8 @@ import SnapKit
 import SwiftyJSON
 
 // MARK: 宏定义
+let KScreenWidth = UIScreen.main.bounds.size.width < UIScreen.main.bounds.size.height ? UIScreen.main.bounds.size.width : UIScreen.main.bounds.size.height
+let KScreenHeight = UIScreen.main.bounds.size.width > UIScreen.main.bounds.size.height ? UIScreen.main.bounds.size.width : UIScreen.main.bounds.size.height
 let SCALE = UIScreen.main.bounds.size.width/375.0
 
 // MARK: 接口

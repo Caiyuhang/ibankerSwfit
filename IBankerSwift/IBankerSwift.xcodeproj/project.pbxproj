@@ -30,6 +30,7 @@
 		0F518B882145FCEA00F54B6D /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B872145FCEA00F54B6D /* RequestManager.swift */; };
 		0F518B8C2146451300F54B6D /* JsonHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B8B2146451300F54B6D /* JsonHandle.swift */; };
 		0F518B9021479B9F00F54B6D /* IBRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B8F21479B9F00F54B6D /* IBRefreshHeader.swift */; };
+		0F518B962147AB8600F54B6D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B952147AB8600F54B6D /* LoadingView.swift */; };
 		3BBF03785AAE62568DBC6FA5 /* Pods_IBankerSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727930A92C85419F5885DE08 /* Pods_IBankerSwiftUITests.framework */; };
 		87363D3A6D653D650B633411 /* Pods_IBankerSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E0F58337C05BF784C43427 /* Pods_IBankerSwiftTests.framework */; };
 		F974FE760CB9FAFB14E3522D /* Pods_IBankerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01204F615D6D1EC52B1D1517 /* Pods_IBankerSwift.framework */; };
@@ -85,6 +86,7 @@
 		0F518B8B2146451300F54B6D /* JsonHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHandle.swift; sourceTree = "<group>"; };
 		0F518B8D21478E2A00F54B6D /* Swift-Bridge-Objective-C.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridge-Objective-C.h"; sourceTree = "<group>"; };
 		0F518B8F21479B9F00F54B6D /* IBRefreshHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBRefreshHeader.swift; sourceTree = "<group>"; };
+		0F518B952147AB8600F54B6D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		15E0F58337C05BF784C43427 /* Pods_IBankerSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBankerSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		399221F87CE24E5B31F06826 /* Pods-IBankerSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBankerSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBankerSwiftTests/Pods-IBankerSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E5C305FD75FF775EE633F3E /* Pods-IBankerSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBankerSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBankerSwiftTests/Pods-IBankerSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				0F518B8F21479B9F00F54B6D /* IBRefreshHeader.swift */,
+				0F518B952147AB8600F54B6D /* LoadingView.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -617,6 +620,7 @@
 				0F518B0921411AEB00F54B6D /* AppDelegate.swift in Sources */,
 				0F518B3921411C8200F54B6D /* BaseViewController.swift in Sources */,
 				0F518B3B21411C9500F54B6D /* HomeViewController.swift in Sources */,
+				0F518B962147AB8600F54B6D /* LoadingView.swift in Sources */,
 				0F518B8C2146451300F54B6D /* JsonHandle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -170,7 +170,6 @@ extension ProductViewController {
     //获取产品列表数据
     fileprivate func getProductsData() {
         RequestManager.selectProduct(pageNum: page+1, search: nil, success: { [unowned self] (result, error) in
-            
             self.tableView.mj_header.endRefreshing()
             self.tableView.mj_footer.endRefreshing()
             
