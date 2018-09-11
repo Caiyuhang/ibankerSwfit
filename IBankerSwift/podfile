@@ -12,6 +12,8 @@ target 'IBankerSwift' do
     pod 'HandyJSON'
     pod 'Kingfisher'
 
+    pod 'MJRefresh'  #OC第三方库
+
   target 'IBankerSwiftTests' do
     inherit! :search_paths
     # Pods for testing

@@ -33,8 +33,6 @@ extension RequestManager {
      @param success 成功回调
      @param failure 失败回调
      */
-//    -(void)sendIdentifyCode:(NSString *)userTel withNationalCode:(NSString *)nationalCode Success:(void(^)(id dic))success Failure:(void(^)(NSError * error))failure;
-    
     static func sendIdentifyCode(userTel: String, nationalCode: String, success: @escaping((_ result: Any?, _ error: Error?) -> Void), failure: @escaping((_ error: Error?) -> Void)) {
         
         let url: String = InternetHttpBaseUrl.appending("/IdentifyingCode/sendidentifycode.json")
@@ -81,7 +79,6 @@ extension RequestManager {
      @param success 成功回调
      @param failure 失败回调
      */
-//    -(void)userLogin:(NSString *)userTel withUserPassword:(NSString *)userPassword isAutoLogin:(BOOL)isAutoLogin Success:(void(^)(id dic))success Failure:(void(^)(NSError * error))failure;
     static func userLogin(userTel: String, userPassword: String, success: @escaping((_ result: Any?, _ error: Error?) -> Void), failure: @escaping((_ error: Error?) -> Void)) {
         
         let url: String = InternetHttpBaseUrl.appending("/SysUser/login.json")
@@ -122,10 +119,10 @@ extension RequestManager {
      @param pageNum 页码
      @param search 搜索内容（非必填）
      */
-//    -(void)selectProduct:(NSInteger)pageNum withSearch:(NSString *)search Success:(void(^)(id dic))success Failure:(void(^)(NSError * error))failure;
     static func selectProduct(pageNum: Int, search: String?, success: @escaping((_ result: Any?, _ error: Error?) -> Void), failure: @escaping((_ error: Error?) -> Void)) {
         
-        let url: String = InternetHttpBaseUrl.appending("/Home/SelectProduct.json")
+//        let url: String = InternetHttpBaseUrl.appending("/Home/SelectProduct.json")
+        let url: String = InternetHttpBaseUrl + "/Home/SelectProduct.json"
         
         var params = [String: Any]()
         params["pageNum"] = pageNum

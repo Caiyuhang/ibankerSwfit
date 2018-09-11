@@ -14,6 +14,8 @@ private let CellIdent = "productCell"
 
 class ProductViewController: BaseViewController {
 
+    var page: Int = 0
+    
     lazy var dataArray = [ProductLibraryModel]()
     
     lazy var titleLab: UILabel = {
@@ -44,8 +46,8 @@ class ProductViewController: BaseViewController {
         super.viewDidLoad()
 
         setUpUI()
+        tableView.mj_header.beginRefreshing()
         
-        getProductsData()
     }
     
     @objc fileprivate func searchBtnClicked(btn: UIButton) {
@@ -116,6 +118,19 @@ extension ProductViewController {
             make.right.equalTo(view.snp.right)
         }
         
+        //MJRefresh header
+        let header: IBRefreshHeader = IBRefreshHeader { [unowned self] in
+            self.page = 0
+            self.getProductsData()
+        }
+        tableView.mj_header = header
+        
+        //MJRefresh footer
+        let footer: MJRefreshBackNormalFooter = MJRefreshBackNormalFooter {
+            self.getProductsData()
+        }
+        tableView.mj_footer = footer
+        
     }
 }
 
@@ -154,9 +169,13 @@ extension ProductViewController: UITableViewDelegate, UITableViewDataSource {
 extension ProductViewController {
     //获取产品列表数据
     fileprivate func getProductsData() {
-        RequestManager.selectProduct(pageNum: 1, search: nil, success: { (result, error) in
+        RequestManager.selectProduct(pageNum: page+1, search: nil, success: { [unowned self] (result, error) in
             
-            if error != nil {
+            self.tableView.mj_header.endRefreshing()
+            self.tableView.mj_footer.endRefreshing()
+            
+            if error != nil
+            {
                 print("请求失败")
                 return
             }
@@ -164,36 +183,40 @@ extension ProductViewController {
             //print("JSON:\(json)")
             if json["code"] == 1
             {
+                if self.page == 0   //如果是第一页，清空数据源
+                {
+                    self.dataArray.removeAll()
+                }
+                //json转string
                 let jsonString = json.rawString(.utf8, options: .prettyPrinted)
-                
-//                let products = [ProductLibraryModel].deserialize(from: jsonString, designatedPath: "data.ProductList")
-//                if let array = products?.first as? ProductLibraryModel {
-//                    self.dataArray.append(array)
-//                    self.tableView.reloadData()
-//                }
-                
-                
-                if let products = [ProductLibraryModel].deserialize(from: jsonString, designatedPath: "data.ProductList") {
-                    //print("ARRAY:\(array)")
-                    
-                    for item in products
+                //用HandyJSON实现字典数组转模型数组
+                if let products = [ProductLibraryModel].deserialize(from: jsonString, designatedPath: "data.ProductList")
+                {
+                    if products.count > 0
                     {
-                        if let product = item as? ProductLibraryModel
+                        self.page += 1
+                        //dataArray.append(products)
+                        for item in products
                         {
-                            self.dataArray.append(item!)
+                            if let product = item as? ProductLibraryModel
+                            {
+                                self.dataArray.append(item!)
+                            }
                         }
                     }
-                    self.tableView.reloadData()
-//                    dataArray.append(products)
                 }
+                //刷新table
+                self.tableView.reloadData()
             }
             else
             {
                 
             }
             
+        }) { [unowned self] (error) in
             
-        }) { (error) in
+            self.tableView.mj_header.endRefreshing()
+            self.tableView.mj_footer.endRefreshing()
             
         }
     }
