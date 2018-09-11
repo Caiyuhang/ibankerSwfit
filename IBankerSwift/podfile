@@ -10,7 +10,7 @@ target 'IBankerSwift' do
     pod 'Alamofire'
     pod 'SwiftyJSON'
     pod 'HandyJSON'
-
+    pod 'Kingfisher'
 
   target 'IBankerSwiftTests' do
     inherit! :search_paths

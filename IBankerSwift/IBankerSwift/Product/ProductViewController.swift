@@ -79,6 +79,7 @@ class ProductViewController: BaseViewController {
 
 }
 
+// MARK: UI布局
 extension ProductViewController {
     fileprivate func setUpUI() {
         
@@ -104,8 +105,8 @@ extension ProductViewController {
         //
         self.view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
-            make.top.equalTo(titleLab.snp.bottom)
-//            make.bottom.equalTo(view.snp.bottom)
+            make.top.equalTo(titleLab.snp.bottom).offset(15*SCALE)
+            //make.bottom.equalTo(view.snp.bottom)
             if #available(iOS 11.0, *) {
                  make.bottom.equalTo(view.safeAreaInsets.bottom)
             } else {
@@ -118,11 +119,11 @@ extension ProductViewController {
     }
 }
 
-//控制器遵循tableView的代理和数据源
+// MARK: 控制器遵循tableView的代理和数据源
 extension ProductViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 294*SCALE
+        return ProductTableCell_Height
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -149,7 +150,9 @@ extension ProductViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+// MARK: 网络请求
 extension ProductViewController {
+    //获取产品列表数据
     fileprivate func getProductsData() {
         RequestManager.selectProduct(pageNum: 1, search: nil, success: { (result, error) in
             

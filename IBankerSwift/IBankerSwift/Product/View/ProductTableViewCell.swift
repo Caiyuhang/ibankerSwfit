@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Kingfisher
+
+let ProductTableCell_Height: CGFloat = 305*SCALE
 
 class ProductTableViewCell: UITableViewCell {
     
@@ -92,15 +95,31 @@ extension ProductTableViewCell {
             make.left.equalTo(15*SCALE)
             make.right.equalTo(-15*SCALE)
             make.height.equalTo(1.0)
-            make.top.equalTo(contentLab.snp.bottom).offset(20*SCALE)
+//            make.top.equalTo(contentLab.snp.bottom).offset(20*SCALE)
+            make.bottom.equalTo((line.superview?.snp.bottom)!)
         }
     }
 }
+
 
 // MARK: 刷新UI
 extension ProductTableViewCell {
     func reloadCell(model: ProductLibraryModel) {
         titleLab.text = model.productPassageShortInfo
         contentLab.text = model.productPassageTitle
+//        imgView.kf.setImage(with: ImageResource(downloadURL: URL.init(string: model.productPassageImg!)!), placeholder: UIImage(named: "placeholder_default"), options: nil, progressBlock: nil, completionHandler: nil)
+        
+        imgView.kf.setImage(with: ImageResource(downloadURL: URL(string: model.productPassageImg!)!), placeholder: UIImage.init(named: "placeholder_default"), options: [.transition(.fade(0.2))], progressBlock: { (receivedSize, totalSize) in
+            let percentage = (Float(receivedSize) / Float(totalSize)) * 100.0
+            print("downloading progress: \(percentage)%")
+//            myIndicator.percentage = percentage
+        }) { (image, error, cacheType, imageURL) in
+            
+        }
+        
+        /*
+         更多关于Kingfisher的使用详情
+         https://github.com/onevcat/Kingfisher/wiki/Cheat-Sheet
+         */
     }
 }
