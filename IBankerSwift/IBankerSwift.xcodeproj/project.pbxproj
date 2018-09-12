@@ -31,6 +31,15 @@
 		0F518B8C2146451300F54B6D /* JsonHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B8B2146451300F54B6D /* JsonHandle.swift */; };
 		0F518B9021479B9F00F54B6D /* IBRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B8F21479B9F00F54B6D /* IBRefreshHeader.swift */; };
 		0F518B962147AB8600F54B6D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B952147AB8600F54B6D /* LoadingView.swift */; };
+		0F518B9B21489A0E00F54B6D /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B9A21489A0E00F54B6D /* UINavigationController+FDFullscreenPopGesture.m */; };
+		0F518B9F2148A4A300F54B6D /* IbankerTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B9E2148A4A300F54B6D /* IbankerTableModel.swift */; };
+		0F518BA32148A72400F54B6D /* IbankerRecommendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518BA22148A72400F54B6D /* IbankerRecommendCollectionViewCell.swift */; };
+		0F518BA52148B23500F54B6D /* IbankerRecommendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518BA42148B23500F54B6D /* IbankerRecommendTableViewCell.swift */; };
+		0F518BA72148D63F00F54B6D /* IbankerNormalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518BA62148D63F00F54B6D /* IbankerNormalTableViewCell.swift */; };
+		0F518BA92148D6B200F54B6D /* IbankerNormalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518BA82148D6B200F54B6D /* IbankerNormalCollectionViewCell.swift */; };
+		0F518BAB2148DC3500F54B6D /* CommonEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518BAA2148DC3500F54B6D /* CommonEnum.swift */; };
+		0F518BAE2148DF6A00F54B6D /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518BAD2148DF6A00F54B6D /* String+Extension.swift */; };
+		0F518BB02148FA6100F54B6D /* IbankerHotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518BAF2148FA6100F54B6D /* IbankerHotTableViewCell.swift */; };
 		3BBF03785AAE62568DBC6FA5 /* Pods_IBankerSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727930A92C85419F5885DE08 /* Pods_IBankerSwiftUITests.framework */; };
 		87363D3A6D653D650B633411 /* Pods_IBankerSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E0F58337C05BF784C43427 /* Pods_IBankerSwiftTests.framework */; };
 		F974FE760CB9FAFB14E3522D /* Pods_IBankerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01204F615D6D1EC52B1D1517 /* Pods_IBankerSwift.framework */; };
@@ -87,6 +96,16 @@
 		0F518B8D21478E2A00F54B6D /* Swift-Bridge-Objective-C.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridge-Objective-C.h"; sourceTree = "<group>"; };
 		0F518B8F21479B9F00F54B6D /* IBRefreshHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBRefreshHeader.swift; sourceTree = "<group>"; };
 		0F518B952147AB8600F54B6D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		0F518B9921489A0E00F54B6D /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		0F518B9A21489A0E00F54B6D /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		0F518B9E2148A4A300F54B6D /* IbankerTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbankerTableModel.swift; sourceTree = "<group>"; };
+		0F518BA22148A72400F54B6D /* IbankerRecommendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbankerRecommendCollectionViewCell.swift; sourceTree = "<group>"; };
+		0F518BA42148B23500F54B6D /* IbankerRecommendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbankerRecommendTableViewCell.swift; sourceTree = "<group>"; };
+		0F518BA62148D63F00F54B6D /* IbankerNormalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbankerNormalTableViewCell.swift; sourceTree = "<group>"; };
+		0F518BA82148D6B200F54B6D /* IbankerNormalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbankerNormalCollectionViewCell.swift; sourceTree = "<group>"; };
+		0F518BAA2148DC3500F54B6D /* CommonEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonEnum.swift; sourceTree = "<group>"; };
+		0F518BAD2148DF6A00F54B6D /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		0F518BAF2148FA6100F54B6D /* IbankerHotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbankerHotTableViewCell.swift; sourceTree = "<group>"; };
 		15E0F58337C05BF784C43427 /* Pods_IBankerSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBankerSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		399221F87CE24E5B31F06826 /* Pods-IBankerSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBankerSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBankerSwiftTests/Pods-IBankerSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E5C305FD75FF775EE633F3E /* Pods-IBankerSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBankerSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBankerSwiftTests/Pods-IBankerSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +170,8 @@
 			children = (
 				0F518B0821411AEB00F54B6D /* AppDelegate.swift */,
 				0F518B0A21411AEB00F54B6D /* ViewController.swift */,
+				0F518BAC2148DF4600F54B6D /* Category */,
+				0F518B97214899E300F54B6D /* ThirdLib */,
 				0F518B8E21479B7E00F54B6D /* Custom */,
 				0F518B832142748300F54B6D /* Manager */,
 				0F518B7521412B7500F54B6D /* Common */,
@@ -220,6 +241,8 @@
 			isa = PBXGroup;
 			children = (
 				0F518B4421411FB000F54B6D /* IbankerViewController.swift */,
+				0F518B9D2148A45C00F54B6D /* View */,
+				0F518B9C2148A43B00F54B6D /* Model */,
 			);
 			path = Ibanker;
 			sourceTree = "<group>";
@@ -247,6 +270,7 @@
 				0F518B8B2146451300F54B6D /* JsonHandle.swift */,
 				0F518B78214249FA00F54B6D /* Prefix.swift */,
 				0F518B8D21478E2A00F54B6D /* Swift-Bridge-Objective-C.h */,
+				0F518BAA2148DC3500F54B6D /* CommonEnum.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -297,6 +321,51 @@
 				0F518B952147AB8600F54B6D /* LoadingView.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		0F518B97214899E300F54B6D /* ThirdLib */ = {
+			isa = PBXGroup;
+			children = (
+				0F518B98214899FC00F54B6D /* FDFullscreenPopGesture */,
+			);
+			path = ThirdLib;
+			sourceTree = "<group>";
+		};
+		0F518B98214899FC00F54B6D /* FDFullscreenPopGesture */ = {
+			isa = PBXGroup;
+			children = (
+				0F518B9921489A0E00F54B6D /* UINavigationController+FDFullscreenPopGesture.h */,
+				0F518B9A21489A0E00F54B6D /* UINavigationController+FDFullscreenPopGesture.m */,
+			);
+			path = FDFullscreenPopGesture;
+			sourceTree = "<group>";
+		};
+		0F518B9C2148A43B00F54B6D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F518B9E2148A4A300F54B6D /* IbankerTableModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0F518B9D2148A45C00F54B6D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F518BA42148B23500F54B6D /* IbankerRecommendTableViewCell.swift */,
+				0F518BA22148A72400F54B6D /* IbankerRecommendCollectionViewCell.swift */,
+				0F518BA62148D63F00F54B6D /* IbankerNormalTableViewCell.swift */,
+				0F518BA82148D6B200F54B6D /* IbankerNormalCollectionViewCell.swift */,
+				0F518BAF2148FA6100F54B6D /* IbankerHotTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0F518BAC2148DF4600F54B6D /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				0F518BAD2148DF6A00F54B6D /* String+Extension.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		74952EE83FEE04E21D9DB687 /* Pods */ = {
@@ -613,14 +682,23 @@
 				0F518B3D21411CD900F54B6D /* RootTabBarController.swift in Sources */,
 				0F518B7721412B8B00F54B6D /* Common.swift in Sources */,
 				0F518B7F214261FB00F54B6D /* ProductLibraryModel.swift in Sources */,
+				0F518BB02148FA6100F54B6D /* IbankerHotTableViewCell.swift in Sources */,
+				0F518BA92148D6B200F54B6D /* IbankerNormalCollectionViewCell.swift in Sources */,
+				0F518B9B21489A0E00F54B6D /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				0F518B3F21411DED00F54B6D /* BaseNavigationController.swift in Sources */,
 				0F518B4821411FC900F54B6D /* MyViewController.swift in Sources */,
 				0F518B4221411F9500F54B6D /* ProductViewController.swift in Sources */,
+				0F518BAB2148DC3500F54B6D /* CommonEnum.swift in Sources */,
+				0F518BA52148B23500F54B6D /* IbankerRecommendTableViewCell.swift in Sources */,
 				0F518B9021479B9F00F54B6D /* IBRefreshHeader.swift in Sources */,
 				0F518B0921411AEB00F54B6D /* AppDelegate.swift in Sources */,
+				0F518BAE2148DF6A00F54B6D /* String+Extension.swift in Sources */,
 				0F518B3921411C8200F54B6D /* BaseViewController.swift in Sources */,
 				0F518B3B21411C9500F54B6D /* HomeViewController.swift in Sources */,
+				0F518BA32148A72400F54B6D /* IbankerRecommendCollectionViewCell.swift in Sources */,
 				0F518B962147AB8600F54B6D /* LoadingView.swift in Sources */,
+				0F518B9F2148A4A300F54B6D /* IbankerTableModel.swift in Sources */,
+				0F518BA72148D63F00F54B6D /* IbankerNormalTableViewCell.swift in Sources */,
 				0F518B8C2146451300F54B6D /* JsonHandle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

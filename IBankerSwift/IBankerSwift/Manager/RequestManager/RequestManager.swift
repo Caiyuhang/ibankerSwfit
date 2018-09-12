@@ -121,7 +121,6 @@ extension RequestManager {
      */
     static func selectProduct(pageNum: Int, search: String?, success: @escaping((_ result: Any?, _ error: Error?) -> Void), failure: @escaping((_ error: Error?) -> Void)) {
         
-//        let url: String = InternetHttpBaseUrl.appending("/Home/SelectProduct.json")
         let url: String = InternetHttpBaseUrl + "/Home/SelectProduct.json"
         
         var params = [String: Any]()
@@ -155,6 +154,37 @@ extension RequestManager {
             
         }
         
+    }
+    
+    /*!
+     @brief 首页ibanker推荐列表
+     */
+    static func selectIbanker(success: @escaping((_ result: Any?, _ error: Error?) -> Void), failure: @escaping((_ error: Error?)-> Void)) {
+        let url: String = InternetHttpBaseUrl + "/Home/SelectIbanker.json"
+        let headers: HTTPHeaders = [
+            "Content-Type": "application/json"
+        ]
+        RequestManager.share.request(url, method: .post, parameters: nil, headers: headers).responseJSON { (response) in
+            
+            //请求失败
+            if response.result.isFailure
+            {
+                failure(response.result.error)
+                return
+            }
+            
+            //请求成功
+            if response.result.isSuccess
+            {
+                //获取结果
+                guard let result = response.result.value else {
+                    failure(response.result.error)
+                    return
+                }
+                //将结果回调回去
+                success(result, nil)
+            }
+        }
     }
     
 }

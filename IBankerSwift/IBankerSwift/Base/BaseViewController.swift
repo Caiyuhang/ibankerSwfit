@@ -14,7 +14,7 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
 
         automaticallyAdjustsScrollViewInsets = false
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.colorWithHexString(hex: "#eef0f4")
         
     }
 

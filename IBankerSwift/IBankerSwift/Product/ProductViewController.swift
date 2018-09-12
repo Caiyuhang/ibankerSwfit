@@ -33,6 +33,10 @@ class ProductViewController: BaseViewController {
         return btn
     }()
     
+    @objc fileprivate func searchBtnClicked(btn: UIButton) {
+        print("searchBtnClicked")
+    }
+    
     lazy var tableView: UITableView = {
         let table = UITableView(frame: CGRect.zero, style: .plain)
         table.delegate = self
@@ -45,22 +49,18 @@ class ProductViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        fd_prefersNavigationBarHidden = true
+        
         setUpUI()
         tableView.mj_header.beginRefreshing()
         
     }
     
-    @objc fileprivate func searchBtnClicked(btn: UIButton) {
-        print("searchBtnClicked")
-    }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-    }
+    
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        return .default
     }
 
     override func didReceiveMemoryWarning() {
