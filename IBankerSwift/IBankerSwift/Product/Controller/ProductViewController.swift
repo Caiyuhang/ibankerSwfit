@@ -18,7 +18,7 @@ class ProductViewController: BaseViewController {
     
     lazy var dataArray = [ProductLibraryModel]()
     
-    lazy var titleLab: UILabel = {
+    lazy var titleLab: UILabel = { [unowned self] in
         let lab = UILabel()
         lab.text = "为你精选的产品"
         lab.font = UIFont.boldSystemFont(ofSize: 24*SCALE)
@@ -26,7 +26,7 @@ class ProductViewController: BaseViewController {
         return lab
     }()
     
-    lazy var searchBtn: UIButton = {
+    lazy var searchBtn: UIButton = { [unowned self] in
         let btn = UIButton()
         btn.setImage(UIImage(named: "navigation_search_black"), for: .normal)
         btn.addTarget(self, action: #selector(searchBtnClicked(btn:)), for: .touchUpInside)
@@ -37,8 +37,9 @@ class ProductViewController: BaseViewController {
         print("searchBtnClicked")
     }
     
-    lazy var tableView: UITableView = {
+    lazy var tableView: UITableView = { [unowned self] in
         let table = UITableView(frame: CGRect.zero, style: .plain)
+        table.backgroundColor = UIColor.clear
         table.delegate = self
         table.dataSource = self
         table.separatorStyle = UITableViewCellSeparatorStyle.none
@@ -108,12 +109,14 @@ extension ProductViewController {
         self.view.addSubview(tableView)
         tableView.snp.makeConstraints { (make) in
             make.top.equalTo(titleLab.snp.bottom).offset(15*SCALE)
-            //make.bottom.equalTo(view.snp.bottom)
+            make.bottom.equalTo(self.bottomLayoutGuide.snp.top)
+            /*
             if #available(iOS 11.0, *) {
                  make.bottom.equalTo(view.safeAreaInsets.bottom)
             } else {
                  make.bottom.equalTo(view.snp.bottom)
             }
+             */
             make.left.equalTo(view.snp.left)
             make.right.equalTo(view.snp.right)
         }
@@ -154,6 +157,7 @@ extension ProductViewController: UITableViewDelegate, UITableViewDataSource {
         if cell == nil {
             cell = ProductTableViewCell(style: .default, reuseIdentifier: CellIdent)
         }
+        cell?.backgroundColor = UIColor.clear
         let cellModel = dataArray[indexPath.row]
         cell?.reloadCell(model: cellModel)
         cell?.selectionStyle = .none
@@ -173,47 +177,55 @@ extension ProductViewController {
             self.tableView.mj_header.endRefreshing()
             self.tableView.mj_footer.endRefreshing()
             
-            if error != nil
-            {
-                print("请求失败")
-                return
-            }
-            let json = JSON(result)
+            let jsonResult = JSON(result)
             //print("JSON:\(json)")
-            if json["code"] == 1
+            if jsonResult["code"] == 1
             {
                 if self.page == 0   //如果是第一页，清空数据源
                 {
                     self.dataArray.removeAll()
                 }
                 //json转string
-                let jsonString = json.rawString(.utf8, options: .prettyPrinted)
+                let jsonString = jsonResult.rawString(.utf8, options: .prettyPrinted)
+                
                 //用HandyJSON实现字典数组转模型数组
-                if let products = [ProductLibraryModel].deserialize(from: jsonString, designatedPath: "data.ProductList")
+                if let products = [ProductLibraryModel].deserialize(from: jsonString, designatedPath: "data.ProductList") as? [ProductLibraryModel]
                 {
-                    if products.count > 0
-                    {
-                        self.page += 1
-                        //dataArray.append(products)
-                        for item in products
-                        {
-                            if let product = item as? ProductLibraryModel
-                            {
-                                self.dataArray.append(item!)
-                            }
-                        }
-                    }
+                    self.dataArray.append(contentsOf: products)
                 }
+                
+                //用HandyJSON实现字典数组转模型数组
+//                if let products = [ProductLibraryModel].deserialize(from: jsonString, designatedPath: "data.ProductList")
+//                {
+//                    if products.count > 0
+//                    {
+//                        self.page += 1
+//                        //dataArray.append(products)
+//                        for item in products
+//                        {
+//                            if let product = item as? ProductLibraryModel
+//                            {
+//                                self.dataArray.append(item!)
+//                            }
+//                        }
+//                    }
+//                }
                 //刷新table
                 self.tableView.reloadData()
             }
             else
             {
-                
+                if let errorMsg = jsonResult["Msg"].rawString()
+                {
+                    Toast.share.makeText(text: errorMsg)
+                    Toast.share.show()
+                }
             }
             
         }) { [unowned self] (error) in
             
+            Toast.share.makeText(text: "网络不给力")
+            Toast.share.show()
             self.tableView.mj_header.endRefreshing()
             self.tableView.mj_footer.endRefreshing()
             

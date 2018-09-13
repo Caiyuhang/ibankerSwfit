@@ -41,6 +41,8 @@ class IbankerRecommendTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.backgroundColor = UIColor.clear
+        self.selectionStyle = .none
         setUpUI()
     }
     

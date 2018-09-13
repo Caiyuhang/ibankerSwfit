@@ -36,6 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setUpControllers() {
         let rootTabBar: RootTabBarController = RootTabBarController()
         window?.rootViewController = rootTabBar
+        rootTabBar.delegate = self
         tabBar = rootTabBar
     }
     

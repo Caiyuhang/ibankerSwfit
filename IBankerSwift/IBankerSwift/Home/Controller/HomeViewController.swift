@@ -1,5 +1,5 @@
 //
-//  MyViewController.swift
+//  HomeViewController.swift
 //  IBankerSwift
 //
 //  Created by 蔡宇航 on 2018/9/6.
@@ -8,12 +8,11 @@
 
 import UIKit
 
-class MyViewController: BaseViewController {
+class HomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

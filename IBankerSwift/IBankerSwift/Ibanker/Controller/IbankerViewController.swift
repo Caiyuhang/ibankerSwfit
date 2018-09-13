@@ -166,7 +166,6 @@ extension IbankerViewController:  UITableViewDelegate, UITableViewDataSource {
             if cell == nil {
                 cell = IbankerRecommendTableViewCell(style: .default, reuseIdentifier: recommendCellId)
             }
-            cell?.backgroundColor = UIColor.clear
             let models = tableModel.datas as? [IbankerRecommendModel]
             cell?.reloadCell(recommeds: models!)
             return cell!
@@ -178,7 +177,6 @@ extension IbankerViewController:  UITableViewDelegate, UITableViewDataSource {
             if cell == nil {
                 cell = IbankerNormalTableViewCell(style: .default, reuseIdentifier: normalCellId)
             }
-            cell?.backgroundColor = UIColor.clear
             let models = tableModel.datas as? [IbankerNormalModel]
             cell?.reloadCell(normals: models!)
             return cell!
@@ -190,7 +188,6 @@ extension IbankerViewController:  UITableViewDelegate, UITableViewDataSource {
             if cell == nil {
                 cell = IbankerHotTableViewCell(style: .default, reuseIdentifier: hotCellId)
             }
-            cell?.backgroundColor = UIColor.clear
             let models = tableModel.datas as? [IbankerHotModel]
             let model = models![indexPath.row]
             cell?.reloadCell(model: model)
@@ -272,11 +269,16 @@ extension IbankerViewController {
             }
             else
             {
-                //toast
+                if let errorMsg = json["Msg"].rawString()
+                {
+                    Toast.share.makeText(text: errorMsg)
+                    Toast.share.show()
+                }
             }
             
-        }) { (error) in
-            //toast
+        }) { [unowned self] (error) in
+            Toast.share.makeText(text: "网络不给力")
+            Toast.share.show()
             self.table.mj_header.endRefreshing()
         }
     }

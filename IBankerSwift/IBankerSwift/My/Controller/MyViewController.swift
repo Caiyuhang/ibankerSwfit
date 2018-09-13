@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  MyViewController.swift
 //  IBankerSwift
 //
 //  Created by 蔡宇航 on 2018/9/6.
@@ -8,12 +8,17 @@
 
 import UIKit
 
-class HomeViewController: BaseViewController {
+class MyViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        Toast.share.makeText(text: "toast 内容是: " + String(format: "%ld", arc4random()%1000))
+        Toast.share.show()
     }
 
     override func didReceiveMemoryWarning() {
