@@ -15,7 +15,6 @@
 		0F518B1E21411AEE00F54B6D /* IBankerSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B1D21411AEE00F54B6D /* IBankerSwiftTests.swift */; };
 		0F518B2921411AEE00F54B6D /* IBankerSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B2821411AEE00F54B6D /* IBankerSwiftUITests.swift */; };
 		0F518B3921411C8200F54B6D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B3821411C8200F54B6D /* BaseViewController.swift */; };
-		0F518B3B21411C9500F54B6D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B3A21411C9500F54B6D /* HomeViewController.swift */; };
 		0F518B3D21411CD900F54B6D /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B3C21411CD900F54B6D /* RootTabBarController.swift */; };
 		0F518B3F21411DED00F54B6D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B3E21411DED00F54B6D /* BaseNavigationController.swift */; };
 		0F518B4221411F9500F54B6D /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B4121411F9500F54B6D /* ProductViewController.swift */; };
@@ -42,6 +41,13 @@
 		0F518BB02148FA6100F54B6D /* IbankerHotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518BAF2148FA6100F54B6D /* IbankerHotTableViewCell.swift */; };
 		0F518BB42149137E00F54B6D /* AppDelegate+TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518BB32149137E00F54B6D /* AppDelegate+TabBarController.swift */; };
 		0F518BB6214A08ED00F54B6D /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518BB5214A08ED00F54B6D /* Toast.swift */; };
+		0F518C05214A4BC900F54B6D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518C04214A4BC900F54B6D /* WelcomeViewController.swift */; };
+		0F518C06214A4F0500F54B6D /* login_video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0F518BBB214A462C00F54B6D /* login_video.mp4 */; };
+		0F518C07214A4F0800F54B6D /* loginmovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0F518BBC214A463400F54B6D /* loginmovie.mp4 */; };
+		0F518C08214A4F3600F54B6D /* opening_long.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0F518BBD214A463400F54B6D /* opening_long.mp4 */; };
+		0F518C09214A4F3800F54B6D /* qidong.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0F518BBE214A463500F54B6D /* qidong.mp4 */; };
+		0F518C0B214B45F500F54B6D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518C0A214B45F500F54B6D /* HomeViewController.swift */; };
+		0F518C0D214B4D9900F54B6D /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518C0C214B4D9900F54B6D /* HomeTableViewController.swift */; };
 		3BBF03785AAE62568DBC6FA5 /* Pods_IBankerSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727930A92C85419F5885DE08 /* Pods_IBankerSwiftUITests.framework */; };
 		87363D3A6D653D650B633411 /* Pods_IBankerSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E0F58337C05BF784C43427 /* Pods_IBankerSwiftTests.framework */; };
 		F974FE760CB9FAFB14E3522D /* Pods_IBankerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01204F615D6D1EC52B1D1517 /* Pods_IBankerSwift.framework */; };
@@ -81,7 +87,6 @@
 		0F518B2821411AEE00F54B6D /* IBankerSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBankerSwiftUITests.swift; sourceTree = "<group>"; };
 		0F518B2A21411AEE00F54B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F518B3821411C8200F54B6D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		0F518B3A21411C9500F54B6D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0F518B3C21411CD900F54B6D /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		0F518B3E21411DED00F54B6D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		0F518B4121411F9500F54B6D /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +115,13 @@
 		0F518BAF2148FA6100F54B6D /* IbankerHotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbankerHotTableViewCell.swift; sourceTree = "<group>"; };
 		0F518BB32149137E00F54B6D /* AppDelegate+TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+TabBarController.swift"; sourceTree = "<group>"; };
 		0F518BB5214A08ED00F54B6D /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		0F518BBB214A462C00F54B6D /* login_video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = login_video.mp4; sourceTree = "<group>"; };
+		0F518BBC214A463400F54B6D /* loginmovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = loginmovie.mp4; sourceTree = "<group>"; };
+		0F518BBD214A463400F54B6D /* opening_long.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = opening_long.mp4; sourceTree = "<group>"; };
+		0F518BBE214A463500F54B6D /* qidong.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = qidong.mp4; sourceTree = "<group>"; };
+		0F518C04214A4BC900F54B6D /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		0F518C0A214B45F500F54B6D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0F518C0C214B4D9900F54B6D /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		15E0F58337C05BF784C43427 /* Pods_IBankerSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBankerSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		399221F87CE24E5B31F06826 /* Pods-IBankerSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBankerSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBankerSwiftTests/Pods-IBankerSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E5C305FD75FF775EE633F3E /* Pods-IBankerSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBankerSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBankerSwiftTests/Pods-IBankerSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +186,7 @@
 			children = (
 				0F518B0821411AEB00F54B6D /* AppDelegate.swift */,
 				0F518B0A21411AEB00F54B6D /* ViewController.swift */,
+				0F518C00214A4B9800F54B6D /* Welcome */,
 				0F518BAC2148DF4600F54B6D /* Category */,
 				0F518B97214899E300F54B6D /* ThirdLib */,
 				0F518B8E21479B7E00F54B6D /* Custom */,
@@ -394,7 +407,8 @@
 		0F518BB7214A130500F54B6D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0F518B3A21411C9500F54B6D /* HomeViewController.swift */,
+				0F518C0A214B45F500F54B6D /* HomeViewController.swift */,
+				0F518C0C214B4D9900F54B6D /* HomeTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -418,8 +432,20 @@
 		0F518BBA214A45B200F54B6D /* Videos */ = {
 			isa = PBXGroup;
 			children = (
+				0F518BBB214A462C00F54B6D /* login_video.mp4 */,
+				0F518BBC214A463400F54B6D /* loginmovie.mp4 */,
+				0F518BBD214A463400F54B6D /* opening_long.mp4 */,
+				0F518BBE214A463500F54B6D /* qidong.mp4 */,
 			);
 			path = Videos;
+			sourceTree = "<group>";
+		};
+		0F518C00214A4B9800F54B6D /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				0F518C04214A4BC900F54B6D /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		74952EE83FEE04E21D9DB687 /* Pods */ = {
@@ -562,6 +588,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F518B1321411AEE00F54B6D /* LaunchScreen.storyboard in Resources */,
+				0F518C09214A4F3800F54B6D /* qidong.mp4 in Resources */,
+				0F518C07214A4F0800F54B6D /* loginmovie.mp4 in Resources */,
+				0F518C08214A4F3600F54B6D /* opening_long.mp4 in Resources */,
+				0F518C06214A4F0500F54B6D /* login_video.mp4 in Resources */,
 				0F518B1021411AEE00F54B6D /* Assets.xcassets in Resources */,
 				0F518B0E21411AEB00F54B6D /* Main.storyboard in Resources */,
 			);
@@ -735,8 +765,10 @@
 				0F518B7C214261C300F54B6D /* BaseModel.swift in Sources */,
 				0F518BB6214A08ED00F54B6D /* Toast.swift in Sources */,
 				0F518B4B2141201D00F54B6D /* IMViewController.swift in Sources */,
+				0F518C05214A4BC900F54B6D /* WelcomeViewController.swift in Sources */,
 				0F518B3D21411CD900F54B6D /* RootTabBarController.swift in Sources */,
 				0F518B7721412B8B00F54B6D /* Common.swift in Sources */,
+				0F518C0D214B4D9900F54B6D /* HomeTableViewController.swift in Sources */,
 				0F518B7F214261FB00F54B6D /* ProductLibraryModel.swift in Sources */,
 				0F518BB02148FA6100F54B6D /* IbankerHotTableViewCell.swift in Sources */,
 				0F518BA92148D6B200F54B6D /* IbankerNormalCollectionViewCell.swift in Sources */,
@@ -750,12 +782,12 @@
 				0F518B0921411AEB00F54B6D /* AppDelegate.swift in Sources */,
 				0F518BAE2148DF6A00F54B6D /* String+Extension.swift in Sources */,
 				0F518B3921411C8200F54B6D /* BaseViewController.swift in Sources */,
-				0F518B3B21411C9500F54B6D /* HomeViewController.swift in Sources */,
 				0F518BA32148A72400F54B6D /* IbankerRecommendCollectionViewCell.swift in Sources */,
 				0F518B962147AB8600F54B6D /* LoadingView.swift in Sources */,
 				0F518B9F2148A4A300F54B6D /* IbankerTableModel.swift in Sources */,
 				0F518BA72148D63F00F54B6D /* IbankerNormalTableViewCell.swift in Sources */,
 				0F518B8C2146451300F54B6D /* JsonHandle.swift in Sources */,
+				0F518C0B214B45F500F54B6D /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

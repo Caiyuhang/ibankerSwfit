@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setUpKeywindow()
         
+        setUpWelcome()
         
         return true
     }
@@ -40,6 +41,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBar = rootTabBar
     }
     
+    //创建视频欢迎页
+    func setUpWelcome() {
+        let vc: WelcomeViewController = WelcomeViewController()
+        
+        window?.rootViewController?.addChildViewController(vc)
+        vc.didMove(toParentViewController: window?.rootViewController)
+        window?.rootViewController?.view.addSubview(vc.view)
+    }
     
 
     func applicationWillResignActive(_ application: UIApplication) {

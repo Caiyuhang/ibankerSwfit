@@ -5,6 +5,7 @@ PODS:
   - MJRefresh (3.1.15.3)
   - SnapKit (4.0.0)
   - SwiftyJSON (4.1.0)
+  - WMPageController (2.4.3)
 
 DEPENDENCIES:
   - Alamofire
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - MJRefresh
   - SnapKit
   - SwiftyJSON
+  - WMPageController (~> 2.4.0)
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
@@ -21,7 +23,8 @@ SPEC CHECKSUMS:
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  WMPageController: 4c7f2c636675a71aea5eecf8fdc07a0ce86954e3
 
-PODFILE CHECKSUM: 775629309cdeb66897722741eeb1310844734834
+PODFILE CHECKSUM: 1df22bf7878b3806bb60213951a52347f71e08fc
 
 COCOAPODS: 1.2.1

@@ -13,6 +13,7 @@ target 'IBankerSwift' do
     pod 'Kingfisher'
 
     pod 'MJRefresh'  #OC第三方库
+    pod 'WMPageController', '~> 2.4.0'  #OC库
 
   target 'IBankerSwiftTests' do
     inherit! :search_paths

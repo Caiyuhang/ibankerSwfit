@@ -15,3 +15,13 @@ enum IBankerLevel: Int {
     case senior  = 2    //资深合伙人
     case league  = 3    //联盟委员合伙人
 }
+
+// MARK: 首页header类型
+enum HomeHeaderType {
+    case publicFund         //公募基金
+    case insurance          //保险
+    case medicalTreatment   //医疗
+    case studyAbroad        //留学
+    case privateFund        //私募基金
+    case IFO                //IFO
+}

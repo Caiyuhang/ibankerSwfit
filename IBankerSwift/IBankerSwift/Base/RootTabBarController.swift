@@ -63,7 +63,7 @@ class RootTabBarController: UITabBarController {
 extension RootTabBarController {
     
     //配置控制器的
-    fileprivate func configChildController(withController controller: BaseViewController, normalImg image1: String, selectImg image2: String, itemTitle title: String) {
+    fileprivate func configChildController(withController controller: UIViewController, normalImg image1: String, selectImg image2: String, itemTitle title: String) {
         
         let navController: BaseNavigationController = BaseNavigationController(rootViewController: controller)
         
