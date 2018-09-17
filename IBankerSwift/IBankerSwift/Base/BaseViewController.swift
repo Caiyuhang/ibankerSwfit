@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum backBarItemColor {
+    case black
+    case white
+}
+
+
 class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -17,6 +23,24 @@ class BaseViewController: UIViewController {
         view.backgroundColor = UIColor.colorWithHexString(hex: "#eef0f4")
         
     }
+    
+    func createBackBarItem(color: backBarItemColor) {
+        var img = UIImage()
+        switch color {
+        case .black:
+            img = UIImage(named: "back")!.withRenderingMode(.alwaysOriginal)
+        case .white:
+            img = UIImage(named: "back_white")!.withRenderingMode(.alwaysOriginal)
+        }
+        
+        let item = UIBarButtonItem(image: img, style: .plain, target: self, action: #selector(backBarItemClicked))
+        navigationItem.leftBarButtonItem = item
+    }
+    
+    @objc func backBarItemClicked() {
+        navigationController?.popViewController(animated: true)
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -48,6 +48,8 @@
 		0F518C09214A4F3800F54B6D /* qidong.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0F518BBE214A463500F54B6D /* qidong.mp4 */; };
 		0F518C0B214B45F500F54B6D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518C0A214B45F500F54B6D /* HomeViewController.swift */; };
 		0F518C0D214B4D9900F54B6D /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518C0C214B4D9900F54B6D /* HomeTableViewController.swift */; };
+		0F518C0F214B8E8400F54B6D /* IbankerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518C0E214B8E8400F54B6D /* IbankerDetailViewController.swift */; };
+		0F518C14214F6D3800F54B6D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518C13214F6D3800F54B6D /* LoginViewController.swift */; };
 		3BBF03785AAE62568DBC6FA5 /* Pods_IBankerSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727930A92C85419F5885DE08 /* Pods_IBankerSwiftUITests.framework */; };
 		87363D3A6D653D650B633411 /* Pods_IBankerSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E0F58337C05BF784C43427 /* Pods_IBankerSwiftTests.framework */; };
 		F974FE760CB9FAFB14E3522D /* Pods_IBankerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01204F615D6D1EC52B1D1517 /* Pods_IBankerSwift.framework */; };
@@ -122,6 +124,8 @@
 		0F518C04214A4BC900F54B6D /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		0F518C0A214B45F500F54B6D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0F518C0C214B4D9900F54B6D /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		0F518C0E214B8E8400F54B6D /* IbankerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbankerDetailViewController.swift; sourceTree = "<group>"; };
+		0F518C13214F6D3800F54B6D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		15E0F58337C05BF784C43427 /* Pods_IBankerSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBankerSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		399221F87CE24E5B31F06826 /* Pods-IBankerSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBankerSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBankerSwiftTests/Pods-IBankerSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E5C305FD75FF775EE633F3E /* Pods-IBankerSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBankerSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBankerSwiftTests/Pods-IBankerSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 			children = (
 				0F518B0821411AEB00F54B6D /* AppDelegate.swift */,
 				0F518B0A21411AEB00F54B6D /* ViewController.swift */,
+				0F518C12214F6D2900F54B6D /* Login */,
 				0F518C00214A4B9800F54B6D /* Welcome */,
 				0F518BAC2148DF4600F54B6D /* Category */,
 				0F518B97214899E300F54B6D /* ThirdLib */,
@@ -400,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				0F518B4421411FB000F54B6D /* IbankerViewController.swift */,
+				0F518C0E214B8E8400F54B6D /* IbankerDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -446,6 +452,14 @@
 				0F518C04214A4BC900F54B6D /* WelcomeViewController.swift */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		0F518C12214F6D2900F54B6D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0F518C13214F6D3800F54B6D /* LoginViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		74952EE83FEE04E21D9DB687 /* Pods */ = {
@@ -759,6 +773,7 @@
 				0F518BB42149137E00F54B6D /* AppDelegate+TabBarController.swift in Sources */,
 				0F518B0B21411AEB00F54B6D /* ViewController.swift in Sources */,
 				0F518B79214249FA00F54B6D /* Prefix.swift in Sources */,
+				0F518C0F214B8E8400F54B6D /* IbankerDetailViewController.swift in Sources */,
 				0F518B822142637900F54B6D /* ProductTableViewCell.swift in Sources */,
 				0F518B882145FCEA00F54B6D /* RequestManager.swift in Sources */,
 				0F518B4521411FB000F54B6D /* IbankerViewController.swift in Sources */,
@@ -785,6 +800,7 @@
 				0F518BA32148A72400F54B6D /* IbankerRecommendCollectionViewCell.swift in Sources */,
 				0F518B962147AB8600F54B6D /* LoadingView.swift in Sources */,
 				0F518B9F2148A4A300F54B6D /* IbankerTableModel.swift in Sources */,
+				0F518C14214F6D3800F54B6D /* LoginViewController.swift in Sources */,
 				0F518BA72148D63F00F54B6D /* IbankerNormalTableViewCell.swift in Sources */,
 				0F518B8C2146451300F54B6D /* JsonHandle.swift in Sources */,
 				0F518C0B214B45F500F54B6D /* HomeViewController.swift in Sources */,

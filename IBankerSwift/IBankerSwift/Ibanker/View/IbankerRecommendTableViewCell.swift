@@ -16,6 +16,11 @@ class IbankerRecommendTableViewCell: UITableViewCell {
 
     var models: [IbankerRecommendModel]?
     
+    // 1、定义一个闭包类型
+    typealias detailCallBack = (_ recommendModel: IbankerRecommendModel) -> Void
+    // 2、声明一个变量
+    var callBack: detailCallBack?
+    
     lazy var collectView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
@@ -96,7 +101,19 @@ extension IbankerRecommendTableViewCell: UICollectionViewDelegate, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        // 4、调用闭包.设置你想传递的参数，调用前先判定一下，是否已实现
+        if callBack != nil
+        {
+            let model = models![indexPath.item]
+            callBack!(model)
+            //参考https://www.jianshu.com/p/c1059b2f3351
+        }
+    }
+    
+    // 3、定义一个方法，方法的参数为和recommendDetail类型一致的闭包，并赋值给callBack
+    //failure: @escaping((_ error: Error?) -> Void)
+    func gotoRecommendDetail(block: @escaping detailCallBack) {
+        callBack = block
     }
 }
 

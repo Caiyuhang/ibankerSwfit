@@ -24,8 +24,13 @@ class HomeViewController: WMPageController {
         return logo
     }()
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
         
         fd_prefersNavigationBarHidden = true
         
@@ -52,14 +57,6 @@ class HomeViewController: WMPageController {
         if #available(iOS 11.0, *) {
             scrollView?.contentInsetAdjustmentBehavior = .never
         }
-    }
-    
-    override init(viewControllerClasses classes: [AnyClass], andTheirTitles titles: [String]) {
-        super.init(viewControllerClasses: classes, andTheirTitles: titles)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {

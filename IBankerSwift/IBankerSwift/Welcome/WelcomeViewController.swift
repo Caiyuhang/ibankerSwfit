@@ -26,9 +26,8 @@ class WelcomeViewController: UIViewController {
         return btn
     }()
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        //
+    init() {
+        super.init(nibName: nil, bundle: nil)
         setUpPlayer()
     }
     
@@ -47,15 +46,13 @@ class WelcomeViewController: UIViewController {
         
         playerPlay()
         
-        setUpEnterMainBtn()
         
-        
-        /*
         //延迟操作
-        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) { [unowned self] in
-            
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) { [weak self] in
+            //此处有一个问题，在init里面创建播放器，在viewDidLoad创建进入主页按钮，会先创建进入主页按钮，可能是视频layer层渲染慢的问题
+            self?.setUpEnterMainBtn()
         }
-         */
+        
     }
 
     //
@@ -112,8 +109,8 @@ class WelcomeViewController: UIViewController {
             make.bottom.equalTo(-100*SCALE)
         }
         
-        UIView.animate(withDuration: 2.0) { [weak self] in
-            self?.enterMainBtn.alpha = 1.0
+        UIView.animate(withDuration: 2.0) {
+            self.enterMainBtn.alpha = 1.0
         }
     }
     

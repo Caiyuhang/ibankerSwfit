@@ -168,6 +168,12 @@ extension IbankerViewController:  UITableViewDelegate, UITableViewDataSource {
             }
             let models = tableModel.datas as? [IbankerRecommendModel]
             cell?.reloadCell(recommeds: models!)
+            cell?.gotoRecommendDetail( block: { [weak self]  (recommendModel) in
+                let vc = IbankerDetailViewController()
+                vc.ibankerUserId = String(format: "%ld", recommendModel.resumeUserId!)
+                vc.hidesBottomBarWhenPushed = true
+                self?.navigationController?.pushViewController(vc, animated: true)
+            })
             return cell!
         }
         //正常
