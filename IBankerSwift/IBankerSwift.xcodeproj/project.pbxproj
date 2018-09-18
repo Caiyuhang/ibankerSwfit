@@ -26,7 +26,7 @@
 		0F518B7C214261C300F54B6D /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B7B214261C300F54B6D /* BaseModel.swift */; };
 		0F518B7F214261FB00F54B6D /* ProductLibraryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B7E214261FB00F54B6D /* ProductLibraryModel.swift */; };
 		0F518B822142637900F54B6D /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B812142637900F54B6D /* ProductTableViewCell.swift */; };
-		0F518B882145FCEA00F54B6D /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B872145FCEA00F54B6D /* RequestManager.swift */; };
+		0F518B882145FCEA00F54B6D /* RequestManagerTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B872145FCEA00F54B6D /* RequestManagerTemp.swift */; };
 		0F518B8C2146451300F54B6D /* JsonHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B8B2146451300F54B6D /* JsonHandle.swift */; };
 		0F518B9021479B9F00F54B6D /* IBRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B8F21479B9F00F54B6D /* IBRefreshHeader.swift */; };
 		0F518B962147AB8600F54B6D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518B952147AB8600F54B6D /* LoadingView.swift */; };
@@ -50,6 +50,11 @@
 		0F518C0D214B4D9900F54B6D /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518C0C214B4D9900F54B6D /* HomeTableViewController.swift */; };
 		0F518C0F214B8E8400F54B6D /* IbankerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518C0E214B8E8400F54B6D /* IbankerDetailViewController.swift */; };
 		0F518C14214F6D3800F54B6D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518C13214F6D3800F54B6D /* LoginViewController.swift */; };
+		0F518C162150899400F54B6D /* RequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518C152150899400F54B6D /* RequestSender.swift */; };
+		0F518C1821508BC100F54B6D /* IBNetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518C1721508BC100F54B6D /* IBNetworkReachability.swift */; };
+		0F518C1A215094B200F54B6D /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518C19215094B200F54B6D /* RequestManager.swift */; };
+		0F518C1C215098B800F54B6D /* RequestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518C1B215098B800F54B6D /* RequestFile.swift */; };
+		0F518C1F2150F21F00F54B6D /* HomeTableCommonHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F518C1E2150F21F00F54B6D /* HomeTableCommonHeader.swift */; };
 		3BBF03785AAE62568DBC6FA5 /* Pods_IBankerSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 727930A92C85419F5885DE08 /* Pods_IBankerSwiftUITests.framework */; };
 		87363D3A6D653D650B633411 /* Pods_IBankerSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E0F58337C05BF784C43427 /* Pods_IBankerSwiftTests.framework */; };
 		F974FE760CB9FAFB14E3522D /* Pods_IBankerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01204F615D6D1EC52B1D1517 /* Pods_IBankerSwift.framework */; };
@@ -100,7 +105,7 @@
 		0F518B7B214261C300F54B6D /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		0F518B7E214261FB00F54B6D /* ProductLibraryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLibraryModel.swift; sourceTree = "<group>"; };
 		0F518B812142637900F54B6D /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
-		0F518B872145FCEA00F54B6D /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		0F518B872145FCEA00F54B6D /* RequestManagerTemp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManagerTemp.swift; sourceTree = "<group>"; };
 		0F518B8B2146451300F54B6D /* JsonHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHandle.swift; sourceTree = "<group>"; };
 		0F518B8D21478E2A00F54B6D /* Swift-Bridge-Objective-C.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridge-Objective-C.h"; sourceTree = "<group>"; };
 		0F518B8F21479B9F00F54B6D /* IBRefreshHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBRefreshHeader.swift; sourceTree = "<group>"; };
@@ -126,6 +131,11 @@
 		0F518C0C214B4D9900F54B6D /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		0F518C0E214B8E8400F54B6D /* IbankerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IbankerDetailViewController.swift; sourceTree = "<group>"; };
 		0F518C13214F6D3800F54B6D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0F518C152150899400F54B6D /* RequestSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSender.swift; sourceTree = "<group>"; };
+		0F518C1721508BC100F54B6D /* IBNetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBNetworkReachability.swift; sourceTree = "<group>"; };
+		0F518C19215094B200F54B6D /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		0F518C1B215098B800F54B6D /* RequestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFile.swift; sourceTree = "<group>"; };
+		0F518C1E2150F21F00F54B6D /* HomeTableCommonHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableCommonHeader.swift; sourceTree = "<group>"; };
 		15E0F58337C05BF784C43427 /* Pods_IBankerSwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IBankerSwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		399221F87CE24E5B31F06826 /* Pods-IBankerSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBankerSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBankerSwiftTests/Pods-IBankerSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E5C305FD75FF775EE633F3E /* Pods-IBankerSwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBankerSwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IBankerSwiftTests/Pods-IBankerSwiftTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -233,6 +243,7 @@
 		0F518B3621411C5D00F54B6D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0F518C1D2150F20700F54B6D /* View */,
 				0F518BB7214A130500F54B6D /* Controller */,
 				0F518B7A2142614100F54B6D /* Model */,
 			);
@@ -332,7 +343,11 @@
 		0F518B842142749400F54B6D /* RequestManager */ = {
 			isa = PBXGroup;
 			children = (
-				0F518B872145FCEA00F54B6D /* RequestManager.swift */,
+				0F518B872145FCEA00F54B6D /* RequestManagerTemp.swift */,
+				0F518C19215094B200F54B6D /* RequestManager.swift */,
+				0F518C152150899400F54B6D /* RequestSender.swift */,
+				0F518C1B215098B800F54B6D /* RequestFile.swift */,
+				0F518C1721508BC100F54B6D /* IBNetworkReachability.swift */,
 			);
 			path = RequestManager;
 			sourceTree = "<group>";
@@ -460,6 +475,14 @@
 				0F518C13214F6D3800F54B6D /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		0F518C1D2150F20700F54B6D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F518C1E2150F21F00F54B6D /* HomeTableCommonHeader.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		74952EE83FEE04E21D9DB687 /* Pods */ = {
@@ -772,17 +795,20 @@
 			files = (
 				0F518BB42149137E00F54B6D /* AppDelegate+TabBarController.swift in Sources */,
 				0F518B0B21411AEB00F54B6D /* ViewController.swift in Sources */,
+				0F518C162150899400F54B6D /* RequestSender.swift in Sources */,
 				0F518B79214249FA00F54B6D /* Prefix.swift in Sources */,
 				0F518C0F214B8E8400F54B6D /* IbankerDetailViewController.swift in Sources */,
 				0F518B822142637900F54B6D /* ProductTableViewCell.swift in Sources */,
-				0F518B882145FCEA00F54B6D /* RequestManager.swift in Sources */,
+				0F518B882145FCEA00F54B6D /* RequestManagerTemp.swift in Sources */,
 				0F518B4521411FB000F54B6D /* IbankerViewController.swift in Sources */,
 				0F518B7C214261C300F54B6D /* BaseModel.swift in Sources */,
 				0F518BB6214A08ED00F54B6D /* Toast.swift in Sources */,
 				0F518B4B2141201D00F54B6D /* IMViewController.swift in Sources */,
 				0F518C05214A4BC900F54B6D /* WelcomeViewController.swift in Sources */,
+				0F518C1821508BC100F54B6D /* IBNetworkReachability.swift in Sources */,
 				0F518B3D21411CD900F54B6D /* RootTabBarController.swift in Sources */,
 				0F518B7721412B8B00F54B6D /* Common.swift in Sources */,
+				0F518C1A215094B200F54B6D /* RequestManager.swift in Sources */,
 				0F518C0D214B4D9900F54B6D /* HomeTableViewController.swift in Sources */,
 				0F518B7F214261FB00F54B6D /* ProductLibraryModel.swift in Sources */,
 				0F518BB02148FA6100F54B6D /* IbankerHotTableViewCell.swift in Sources */,
@@ -799,7 +825,9 @@
 				0F518B3921411C8200F54B6D /* BaseViewController.swift in Sources */,
 				0F518BA32148A72400F54B6D /* IbankerRecommendCollectionViewCell.swift in Sources */,
 				0F518B962147AB8600F54B6D /* LoadingView.swift in Sources */,
+				0F518C1F2150F21F00F54B6D /* HomeTableCommonHeader.swift in Sources */,
 				0F518B9F2148A4A300F54B6D /* IbankerTableModel.swift in Sources */,
+				0F518C1C215098B800F54B6D /* RequestFile.swift in Sources */,
 				0F518C14214F6D3800F54B6D /* LoginViewController.swift in Sources */,
 				0F518BA72148D63F00F54B6D /* IbankerNormalTableViewCell.swift in Sources */,
 				0F518B8C2146451300F54B6D /* JsonHandle.swift in Sources */,
@@ -982,7 +1010,7 @@
 				INFOPLIST_FILE = IBankerSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cyh.learnswift.IBankerSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyh.learnswift.IBankerSwift1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "IBankerSwift/Common/Swift-Bridge-Objective-C.h";
 				SWIFT_VERSION = 4.0;
@@ -1002,7 +1030,7 @@
 				INFOPLIST_FILE = IBankerSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cyh.learnswift.IBankerSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cyh.learnswift.IBankerSwift1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "IBankerSwift/Common/Swift-Bridge-Objective-C.h";
 				SWIFT_VERSION = 4.0;

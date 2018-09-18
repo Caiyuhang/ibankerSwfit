@@ -110,8 +110,8 @@ extension ProductTableViewCell {
 //        imgView.kf.setImage(with: ImageResource(downloadURL: URL.init(string: model.productPassageImg!)!), placeholder: UIImage(named: "placeholder_default"), options: nil, progressBlock: nil, completionHandler: nil)
         
         imgView.kf.setImage(with: ImageResource(downloadURL: URL(string: model.productPassageImg!)!), placeholder: UIImage.init(named: "placeholder_default"), options: [.transition(.fade(0.2))], progressBlock: { (receivedSize, totalSize) in
-            let percentage = (Float(receivedSize) / Float(totalSize)) * 100.0
-            print("downloading progress: \(percentage)%")
+            // let percentage = (Float(receivedSize) / Float(totalSize)) * 100.0
+            // print("downloading progress: \(percentage)%")
 //            myIndicator.percentage = percentage
         }) { (image, error, cacheType, imageURL) in
             

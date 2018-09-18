@@ -205,11 +205,35 @@ extension IbankerViewController:  UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0.01
+        return 0.001
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0.01
+        let tableModel: IbankerTableModel = dataArray[section] as! IbankerTableModel
+        if tableModel.cellType == .normal
+        {
+            return CommonTableCellHeader_Height
+        }
+        else if tableModel.cellType == .hot
+        {
+            return CommonTableCellHeader_Height - 30*SCALE
+        }
+        return 0.001
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let tableModel: IbankerTableModel = dataArray[section] as! IbankerTableModel
+        if tableModel.cellType == .normal
+        {
+            let header = HomeTableCommonHeader(frame: CGRect(x: 0, y: 0, width: KScreenWidth, height: CommonTableCellHeader_Height), headTitle: "本月Talk King", isHiddenMore: true)
+            return header
+        }
+        else if tableModel.cellType == .hot
+        {
+            let header = HomeTableCommonHeader(frame: CGRect(x: 0, y: 0, width: KScreenWidth, height: CommonTableCellHeader_Height), headTitle: "热门ibanker", isHiddenMore: true)
+            return header
+        }
+        return nil
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
