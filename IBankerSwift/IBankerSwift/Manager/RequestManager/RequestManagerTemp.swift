@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 
-class RequestManager: NSObject {
+class RequestManagerTemp: NSObject {
     
     // MARK: 通用请求的Manager
     static let share: SessionManager = {
@@ -24,7 +24,7 @@ class RequestManager: NSObject {
 }
 
 // MARK: 接口请求
-extension RequestManager {
+extension RequestManagerTemp {
     
     /*!
      @brief 注册获取验证码
@@ -47,7 +47,7 @@ extension RequestManager {
             "Content-Type": "application/json",
             ]
         
-        RequestManager.share.request(url, method: .post, parameters: params, headers: headers).responseJSON { (response) in
+        RequestManagerTemp.share.request(url, method: .post, parameters: params, headers: headers).responseJSON { (response) in
             
             //请求失败
             if response.result.isFailure {
@@ -91,7 +91,7 @@ extension RequestManager {
             "Content-Type": "application/json",
             ]
         
-        RequestManager.share.request(url, method: .post, parameters: params, headers: headers).responseJSON { (response) in
+        RequestManagerTemp.share.request(url, method: .post, parameters: params, headers: headers).responseJSON { (response) in
             
             //请求失败
             if response.result.isFailure {
@@ -130,7 +130,7 @@ extension RequestManager {
         let headers: HTTPHeaders = [
             "Content-Type": "application/json"
             ]
-        RequestManager.share.request(url, method: .post, parameters: params, headers: headers).responseJSON { (response) in
+        RequestManagerTemp.share.request(url, method: .post, parameters: params, headers: headers).responseJSON { (response) in
             
             //请求失败
             if response.result.isFailure {
@@ -164,7 +164,7 @@ extension RequestManager {
         let headers: HTTPHeaders = [
             "Content-Type": "application/json"
         ]
-        RequestManager.share.request(url, method: .post, parameters: nil, headers: headers).responseJSON { (response) in
+        RequestManagerTemp.share.request(url, method: .post, parameters: nil, headers: headers).responseJSON { (response) in
             
             //请求失败
             if response.result.isFailure
